@@ -47,7 +47,24 @@ def apply_coupons(cart, coupons)
       item_on_sale = cart[i][:item] if cart[i][:clearance]
       item_frequency = cart[i][:count]
       coupon_frequency = coupons_with_names[item_on_sale][:num]
+      enough_items = item_frequency >= coupon_frequency
+      non_discounted_items = item_frequency % coupon_frequency
 
+      items_with_discount_frequency = if !enough_items
+        0
+        elsif enough_items && non_discounted_items == 0
+          item_frequency / coupon_frequency
+        else
+          (item_frequency - non_discounted_items) / item_frequency
+        end
+      
+      item_with_discount_name = "#{item_on_sale} W/COUPON"
+      item_with_discount_price = coupons_with_names[item_on_sale][:num] / coupons_with_names[item_on_sale][:cost]
+    
+      item_with_discount_hash = {:item => item_with_discount_name, :price => item_with_discount_price, :clearance = true, :count => items_with_discount_frequency}
+      cart << item_with_discount_hash if items_with_discount_frequency != 0
+
+      cart[i][:count] = non_discounted_items
 
       i+=1
     end
