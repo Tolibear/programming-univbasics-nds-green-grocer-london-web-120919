@@ -16,14 +16,14 @@ def consolidate_cart(cart)
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
   unique_cart = cart.uniq
 
-  unique_cart_index = 0
+  index = 0
 
-    while unique_cart_index < unique_cart.length do
-      item_name = consolidated_cart[new_cart_index][:item]
+    while index < unique_cart.length do
+      item_name = unique_cart[index][:item]
       item_count = []
 
       item_count << find_item_by_name_in_collection(item_name, cart)
-      unique_cart[unique_cart_index] = item_count.length
+      unique_cart[index][:count] = item_count.length
   #     old_cart_index = 0
   #       while old_cart_index < cart.length do
   #         item_count +=1 if cart[old_cart_index][:item] == item_name
