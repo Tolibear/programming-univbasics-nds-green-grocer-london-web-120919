@@ -40,9 +40,9 @@ def apply_coupons(cart, coupons)
       coupons_with_names[:coupons[coupon_i][:item]] = coupons[coupon_i]
       coupon_i += 1
     end
-  
+
   i = 0
-  
+
     while i < cart.length do
       item_on_sale = cart[i][:item] if cart[i][:clearance]
       item_frequency = cart[i][:count]
