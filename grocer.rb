@@ -14,13 +14,12 @@ def consolidate_cart(cart)
   unique_cart = cart.uniq
 
   index = 0
-
+  item_count = 0
     while index < unique_cart.length do
       item_name = unique_cart[index][:item]
-      item_count = []
 
-      item_count << find_item_by_name_in_collection(item_name, cart) unless (find_item_by_name_in_collection(item_name, cart) == nil)
-      unique_cart[index][:count] = item_count.length
+      item_count +=1 unless (find_item_by_name_in_collection(item_name, cart) == nil)
+      unique_cart[index][:count] = item_count
       index += 1
   #     old_cart_index = 0
   #       while old_cart_index < cart.length do
