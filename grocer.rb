@@ -15,9 +15,9 @@ def consolidate_cart(cart)
   # REMEMBER: This returns a new Array that represents the cart. Don't merely
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
   unique_cart = cart.uniq
-  
+
   unique_cart_index = 0
-  
+
     while unique_cart_index < unique_cart.length do
       item_name = consolidated_cart[new_cart_index][:item]
       item_count = []
