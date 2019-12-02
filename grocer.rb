@@ -31,20 +31,7 @@ def consolidate_cart(cart)
   unique_cart
   # binding.pry
 end
-# second attempt
-# consolidated_cart = cart.uniq
-#
-# new_cart_index = 0
-# item_count = []
-#   while new_cart_index < consolidated_cart.length do
-#     item_name = consolidated_cart[new_cart_index][:item]
-#     item_count << find_item_by_name_in_collection(item_name, cart)
-#     new_cart_index +=1
-#   end
-#
-#
-# consolidated_cart
-# end
+
 
 def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
