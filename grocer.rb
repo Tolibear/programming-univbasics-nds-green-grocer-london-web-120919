@@ -47,8 +47,8 @@ def apply_coupons(cart, coupons)
       item_on_sale = cart[i][:item] if cart[i][:clearance]
       item_frequency = cart[i][:count]
       coupon_frequency = coupons_with_names[item_on_sale][:num]
-      
-      
+
+
       i+=1
     end
   cart
