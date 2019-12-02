@@ -57,10 +57,10 @@ def apply_coupons(cart, coupons)
         else
           (item_frequency - non_discounted_items) / item_frequency
         end
-      
+
       item_with_discount_name = "#{item_on_sale} W/COUPON"
       item_with_discount_price = coupons_with_names[item_on_sale][:num] / coupons_with_names[item_on_sale][:cost]
-    
+
       item_with_discount_hash = {:item => item_with_discount_name, :price => item_with_discount_price, :clearance = true, :count => items_with_discount_frequency}
       cart << item_with_discount_hash if items_with_discount_frequency != 0
 
