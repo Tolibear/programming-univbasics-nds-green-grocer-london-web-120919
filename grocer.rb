@@ -37,12 +37,12 @@ def apply_coupons(cart, coupons)
   coupons_with_names = {}
   coupon_i = 0
     while coupon_i < coupons.length do
-      coupons_with_names[coupons[coupon_i][:item]] = coupons[coupon_i]
+      name = coupons[coupon_i][:item]
+      coupons_with_names[name] = coupons[coupon_i]
       coupon_i += 1
     end
 
   i = 0
-
     while i < cart.length do
       if cart[i][:clearance]
         item_on_sale = cart[i][:item]
