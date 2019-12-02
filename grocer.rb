@@ -1,9 +1,6 @@
 require 'pry'
 
 def find_item_by_name_in_collection(name, collection)
-  # Implement me first!
-  #
-  # Consult README for inputs and outputs
   i = 0
   while i < collection.length do
     return collection[i] if collection[i][:item] == name
