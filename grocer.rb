@@ -15,10 +15,10 @@ def consolidate_cart(cart)
   # REMEMBER: This returns a new Array that represents the cart. Don't merely
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
   unique_cart = cart.uniq
-  #
-  # new_cart_index = 0
-  # item_count = 0
-  #   while new_cart_index < consolidated_cart.count do
+  
+  unique_cart_index = 0
+  item_count = 0
+    while unique_cart_index < unique_cart.length do
   #     item_name = consolidated_cart[new_cart_index][:item]
   #     old_cart_index = 0
   #       while old_cart_index < cart.length do
@@ -27,7 +27,7 @@ def consolidate_cart(cart)
   #       end
   #     consolidated_cart[:count] = item_count
   #     new_cart_index +=1
-  #   end
+    end
   unique_cart
   # binding.pry
 end
