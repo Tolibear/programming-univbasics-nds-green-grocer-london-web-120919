@@ -31,8 +31,8 @@ def consolidate_cart(cart)
       consolidated_cart[:count] = item_count
       new_cart_index +=1
     end
-  consolidated_cart
-  binding.pry
+  consolidated_cart.uniq!
+  # binding.pry
 end
 # second attempt
 # consolidated_cart = cart.uniq
