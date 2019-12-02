@@ -20,7 +20,7 @@ def consolidate_cart(cart)
       # item_count = 0
       #  cart.count{ |i| cart[i][:item] == item_name}
 
-      unique_cart[index][:count] = item_count
+      # unique_cart[index][:count] = item_count
       index += 1
   #     old_cart_index = 0
   #       while old_cart_index < cart.length do
