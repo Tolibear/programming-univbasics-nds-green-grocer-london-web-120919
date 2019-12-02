@@ -24,6 +24,7 @@ def consolidate_cart(cart)
 
       item_count << find_item_by_name_in_collection(item_name, cart)
       unique_cart[index][:count] = item_count.length
+      index += 1
   #     old_cart_index = 0
   #       while old_cart_index < cart.length do
   #         item_count +=1 if cart[old_cart_index][:item] == item_name
